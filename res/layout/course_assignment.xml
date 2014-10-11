@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <ListView
+        android:id="@+id/list_ASI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextAssignmentDueDate"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp" >
+    </ListView>
+
+    <EditText
+        android:id="@+id/editTextAssignmentDueDate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextAssignmentDescription"
+        android:layout_alignLeft="@+id/list_ASI"
+        android:layout_alignRight="@+id/list_ASI"
+        android:ems="10"
+        android:hint="Due Date"
+        android:inputType="date"
+        android:visibility="gone" >
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonPostAssignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundedbutton"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Post Assignment"
+        android:textSize="15dp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/editTextAssignmentDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonPostAssignment"
+        android:layout_alignLeft="@+id/editTextAssignmentDueDate"
+        android:layout_alignRight="@+id/editTextAssignmentDueDate"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:visibility="gone" />
+
+</RelativeLayout>
